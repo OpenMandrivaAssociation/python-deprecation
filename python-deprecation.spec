@@ -2,26 +2,19 @@
 
 Name:           python-%{pypi_name}
 Version:        2.1.0
-Release:        %mkrel 2
+Release:        1
 Summary:        A library to handle automated deprecations
 License:        ASL 2.0
 Group:          Development/Python
 URL:            https://pypi.org/project/deprecation
-Source0:        %{pypi_source}
+Source0:        https://files.pythonhosted.org/packages/source/d/%{srcname}/%{srcname}-%{version}.tar.gz
 BuildArch:      noarch
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(setuptools)
 
-%description
-The deprecation library provides a deprecated decorator and a
-fail_if_not_removed decorator for your tests. 
-
-%package -n     python3-%{pypi_name}
-Summary:        %{summary}
-Group:          Development/Python
-BuildRequires:  python3-devel
-BuildRequires:  python3-setuptools
 %{?python_provide:%python_provide python3-%{pypi_name}}
 
-%description -n python3-%{pypi_name}
+%description
 The deprecation library provides a deprecated decorator and a
 fail_if_not_removed decorator for your tests. 
 
@@ -32,14 +25,14 @@ fail_if_not_removed decorator for your tests.
 rm -rf %{pypi_name}.egg-info
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
 
-%files -n python3-%{pypi_name}
+%files
 %doc LICENSE
 %doc README.rst
-%{python3_sitelib}/__pycache__/*
-%{python3_sitelib}/%{pypi_name}.py
-%{python3_sitelib}/%{pypi_name}-%{version}-py%{python3_version}.egg-info
+%{python_sitelib}/__pycache__/*
+%{python_sitelib}/%{pypi_name}.py
+%{python_sitelib}/%{pypi_name}-%{version}-py%{python_version}.egg-info
