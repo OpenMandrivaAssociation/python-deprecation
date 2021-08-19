@@ -7,7 +7,7 @@ Summary:        A library to handle automated deprecations
 License:        ASL 2.0
 Group:          Development/Python
 URL:            https://pypi.org/project/deprecation
-Source0:        https://files.pythonhosted.org/packages/source/d/%{pypiname}/%{pypiname}-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/d/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
