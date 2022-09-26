@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.1.0
-Release:        1
+Release:        2
 Summary:        A library to handle automated deprecations
 License:        ASL 2.0
 Group:          Development/Python
@@ -33,6 +33,5 @@ rm -rf %{pypi_name}.egg-info
 %files
 %doc LICENSE
 %doc README.rst
-%{python_sitelib}/__pycache__/*
 %{python_sitelib}/%{pypi_name}.py
 %{python_sitelib}/%{pypi_name}-%{version}-py%{python_version}.egg-info
