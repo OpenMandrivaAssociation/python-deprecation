@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        2.1.0
-Release:        2
+Release:        3
 Summary:        A library to handle automated deprecations
 License:        ASL 2.0
 Group:          Development/Python
